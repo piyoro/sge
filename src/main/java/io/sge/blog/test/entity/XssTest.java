@@ -17,7 +17,7 @@ public class XssTest {
 	@Column(name = "ID", columnDefinition = "INT")
 	private Integer id;
 
-	@Column(name = "XSS_TEXT", columnDefinition = "VARCHAR(100)")
+	@Column(name = "XSS_TEXT", columnDefinition = "VARCHAR2(1000)")
 	private String xssText;
 
 	public Integer getId() {
