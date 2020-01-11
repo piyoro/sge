@@ -2,7 +2,6 @@ package io.sge.blog.test.service;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +31,12 @@ public class XssTestService {
 			if (returnList != null) {
 				for (XssTest item : returnList) {
 					// 18. 아이디 에서 만 html unescape 처리 테스트
+					/*
+					The method unescapeHtml4(String) from the type StringEscapeUtils is deprecated
 					if (item.getId() == 18) {
 						item.setXssText(StringEscapeUtils.unescapeHtml4(item.getXssText()));
 					}
+					*/
 				}
 			}
 		}
